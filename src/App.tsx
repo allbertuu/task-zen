@@ -9,10 +9,9 @@ import { CloudMoon, CloudSun } from "phosphor-react";
 
 function App() {
   const tasks = useSelector(selectTasks);
-  const savedTheme = localStorage.getItem("theme") !== "dark" ? "light" : "dark";
-  const [appTheme, setAppTheme] = useState(
-    savedTheme
-  );
+  const savedTheme =
+    localStorage.getItem("theme") !== "dark" ? "light" : "dark";
+  const [appTheme, setAppTheme] = useState(savedTheme);
   const completedTasks = tasks.filter((task) => task.isDone).length;
   const totalTasks = tasks.length;
 
